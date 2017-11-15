@@ -116,3 +116,53 @@ print a, b
 b[0] = 'hello'
 print a, b
 
+
+#functions
+def double_it(number):
+    return 2 * number
+print 'The answer is',double_it(2)
+print 'The answer is',double_it('hello')
+print 'The answer is',double_it(3.145673)
+
+def calc_hypo(a,b): #function to calculate hypotenuse of a triangle
+    hypo = (a**2 + b**2)**0.5
+    return hypo
+print 'The hypotenuse is',calc_hypo(3,4)
+
+
+def calc_hypo(a,b): #add checks into function code
+    if type(a) not in (int,float) or type(b) not in (int,float):
+        print 'a bad argument'
+        return False
+    if a <= 0 or b <=0:
+        print 'a bad argument'
+        return False
+    hypo = (a**2 + b**2)**0.5
+    return hypo 
+print 'The hypotenuse is',calc_hypo('hi','alright')
+
+
+pi = 3.145   #calc the area of a circle
+def area(r):
+    area = pi * r**2
+    return area
+print 'The area of the circle is',area(3)
+
+def volume(r):   #calc the volume of a sphere
+    volume = 1.333 * pi * r**3
+    return volume
+print 'The volume of the sphere is',volume(3)
+
+
+#using scripts and libraries
+"""mkdir dancing
+cd dancing/
+gedit _init_.py
+cd ../
+python -c "import dancing"
+"""
+
+#sets and dictionaries
+a = set([0, 1, 2, 3, 4, 5])
+b = set([2, 4, 6, 8])
+print a.union(b)
