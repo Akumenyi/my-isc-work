@@ -109,7 +109,6 @@ print a, b
 b = 'different'
 print a, b
 
-import copy
 a = [0, 1, 2]
 b = copy.deepcopy(a)
 print a, b
