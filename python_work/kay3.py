@@ -122,3 +122,27 @@ differ = m3 - np.ones((2, 4))
 print differ
 print type(differ)
 
+#matplotlib
+times = [0, 0.25, 0.5, 0.75]
+plt.plot(times, [0,0.5,1,1.2], 'g--', label = "Some data")
+plt.plot(times, [1, 2, 3, 4], 'r', label = "Other data")
+plt.title('Concentration of Chlorine vs Time')
+plt.ylabel('Concentration (%)')
+plt.xlabel('Time (s)')
+plt.legend()
+plt.savefig('kwesi.png')
+#plt.show()
+
+Temp = [14.1,15.5,16.3,18.1,17.3,19.1,20.2]
+Time = [0, 1, 2, 3, 4, 5, 6]
+CO2  = [250, 265, 272, 260, 300, 320, 389]
+fig, ax1 = plt.subplots()
+ax1.plot(Time,CO2, 'g--')
+ax1.set_ylabel('CO2', color = 'g')
+ax2 = ax1.twinx()
+ax2.plot(Time,Temp, 'r')
+ax2.set_ylabel('Temp',  color='r')
+plt.show()
+
+
+
